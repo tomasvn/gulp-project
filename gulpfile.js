@@ -9,7 +9,7 @@ gulp.task('scss:build', function() {
 });
 
 gulp.task('scss:watch', function () {
-  gulp.watch('./src/**/*.scss', ['scss']);
+  gulp.watch('./src/**/*.scss', ['scss:build']);
 });
 
 gulp.task('clean', function() {

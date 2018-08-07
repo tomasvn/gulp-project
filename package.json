@@ -4,8 +4,9 @@
   "description": "Gulp Project",
   "main": "index.js",
   "scripts": {
-    "sass": "gulp sass",
-    "sass:watch": "gulp sass:watch"
+    "dev": "gulp scss:watch",
+    "build": "gulp scss:build",
+    "clean": "gulp clean"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/tomasvn/gulp-project#readme",
   "devDependencies": {
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.1"
   }

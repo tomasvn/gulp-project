@@ -17,3 +17,4 @@ npm install
 - [ ] Set up image optimization in dev task
 - [ ] Set up minification CSS/JS in dev task
 - [ ] Set up linting
+- [ ] Set up autoprefixer

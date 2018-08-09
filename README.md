@@ -15,4 +15,5 @@ npm install
 ## TODO
 - [ ] Set up browser-sync in dev task
 - [ ] Set up image optimization in dev task
-- [ ] Set up minification for JS in dev task
+- [ ] Set up minification CSS/JS in dev task
+- [ ] Set up linting

@@ -4,9 +4,9 @@
   "description": "Gulp Project",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp scss:watch",
-    "build": "gulp scss:build",
-    "clean": "gulp clean"
+    "dev": "",
+    "build": "",
+    "clean": ""
   },
   "repository": {
     "type": "git",

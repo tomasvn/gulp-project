@@ -1,8 +1,24 @@
+/*
+Basic Gulp Workflow v1.2.4
+Created by: Ngoc Tu Nguyen <nguyenngoct2112@gmail.com>
+Github Repo: https://github.com/tomasvn/gulp-project.git
+**/
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var del = require('del');
 var browserSync = require('browser-sync').create();
 
+gulp.task('styles', function() { //First argument is the name of the task, second argument callback function
+  return gulp.src('./src/scss/*.scss') //Look into this folder for any SCSS files
+    .pipe(sass.sync().on('error', sass.logError)) //If it SCSS syntax has any error output it to the CLI
+    .pipe(gulp.dest('./src/styles')); //Compile SCSS files into one CSS file, output it here
+});
+
+gulp.task('watch', function() {
+  gulp.watch('./src/scss/*.scss', ['styles']); //Watch - it will run the styles task on file change
+});
+
 gulp.task('clean', function() {
-  return del(['dist/styles', 'dist/scripts', 'dist/images']);
+  return del(['dist/styles', 'dist/scripts', 'dist/images']); //Delete particular files in dist folder
 });

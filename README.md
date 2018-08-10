@@ -9,12 +9,20 @@ npm install
 ## Tasks
 
 1. Development task - ```npm run dev```
-2. Build task - ```npm run build```
-3. Clean task - ```npm run clean```
+2. Developement server - ```npm run dev:server``` [WIP]
+3. Linting CSS - ```npm run lint:css``` [WIP]
+4. Linting JS - ```npm run lint:js``` [WIP]
+5. Build task - ```npm run build``` [WIP]
+6. Clean task - ```npm run clean```
 
-## TODO
+## TODO - Work In Progress
 - [ ] Set up browser-sync in dev task
-- [ ] Set up image optimization in dev task
-- [ ] Set up minification CSS/JS in dev task
 - [ ] Set up linting
+- [ ] Set up image optimization in build task
+- [ ] Set up minification CSS/JS in build task
 - [ ] Set up autoprefixer
+
+## Update - v1.2.4
+- [x] Redo Gulp Tasks
+- [x] Correctly set up gulp watch
+- [x] Add comments to the gulp file

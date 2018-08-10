@@ -1,12 +1,15 @@
 {
   "name": "gulp-project",
-  "version": "1.2.0",
+  "version": "1.2.4",
   "description": "Gulp Project",
   "main": "index.js",
   "scripts": {
-    "dev": "",
+    "dev": "gulp watch",
+    "dev:server": "",
+    "lint:css": "",
+    "lint:js": "",
     "build": "",
-    "clean": ""
+    "clean": "gulp clean"
   },
   "repository": {
     "type": "git",

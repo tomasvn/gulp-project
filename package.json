@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp watch",
     "dev:server": "",
-    "lint:css": "",
+    "lint:css": "stylelint ./src/**/*.scss  || true",
     "lint:js": "",
     "build": "",
     "clean": "gulp clean"

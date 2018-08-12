@@ -11,8 +11,8 @@ npm install
 1. Dev task & run dev server + Hot Reload - ```npm run dev``` ✔️
 3. Linting CSS - ```npm run lint:css``` ✔️
 4. Linting JS - ```npm run lint:js``` [**WIP**]
-5. Build task - ```npm run build``` [**WIP**]
-6. Clean dev folder - ```npm run clean:dev``` [**WIP**]
+5. Build task - ```npm run build``` ✔️
+6. Clean dev folder - ```npm run clean:dev``` ✔️
 7. Clean build folder - ```npm run clean:build``` ✔️
 
 ## TODO - Work In Progress
@@ -32,3 +32,5 @@ npm install
 
 ## Update - v0.5.0
 - [x] Set up browser-sync in dev task
+- [x] Add build task
+- [x] Add dev clean task

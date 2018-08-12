@@ -1,6 +1,6 @@
 {
   "name": "gulp-project",
-  "version": "0.6.0",
+  "version": "0.5.0",
   "description": "Gulp Project",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "lint:css": "stylelint ./src/**/*.scss  || true",
     "lint:js": "",
     "build": "gulp build",
-    "dev:clean": "",
+    "dev:clean": "gulp clean:dev",
     "build:clean": "gulp clean"
   },
   "husky": {

@@ -8,11 +8,12 @@ npm install
 
 ## Tasks
 
-1. Development task & run dev server + Hot Reload - ```npm run dev``` ✔️
+1. Dev task & run dev server + Hot Reload - ```npm run dev``` ✔️
 3. Linting CSS - ```npm run lint:css``` ✔️
 4. Linting JS - ```npm run lint:js``` [**WIP**]
 5. Build task - ```npm run build``` [**WIP**]
-6. Clean task - ```npm run clean```
+6. Clean dev folder - ```npm run clean:dev``` [**WIP**]
+7. Clean build folder - ```npm run clean:build``` ✔️
 
 ## TODO - Work In Progress
 - [ ] Set up JS linting

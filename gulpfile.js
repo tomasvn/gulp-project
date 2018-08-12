@@ -13,6 +13,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var paths = {
   stylesInput: './src/scss/*.scss',
   stylesOutput: './src/styles',
+  stylesDist: 'dist/styles',
   srcHtml: './src/*.html'
 }
 

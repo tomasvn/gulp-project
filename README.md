@@ -31,3 +31,4 @@ npm install
 
 ## Update - v0.4.0
 - [x] Set up stylelint for SCSS/CSS
+- [x] Set up HUSKY Git Hook (Enforcing linting)

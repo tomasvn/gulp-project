@@ -9,7 +9,6 @@
     ],
     "indentation": 2,
     "string-quotes": "double",
-    "no-duplicate-selectors": true,
     "color-hex-case": "lower",
     "color-hex-length": "short",
     "color-named": "never",
@@ -34,6 +33,8 @@
     "media-feature-parentheses-space-inside": "never",
     "media-feature-colon-space-before": "never",
     "media-feature-colon-space-after": "always",
+    "no-missing-end-of-source-newline": null,
+    "no-duplicate-selectors": true,
     "selector-max-specificity": "0,4,0",
     "unit-whitelist": ["em", "rems", "px", "fr", "%"]
   }

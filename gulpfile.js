@@ -51,6 +51,10 @@ gulp.task('build:html', function() {
 gulp.task('build:styles', function() {
   return gulp.src(paths.stylesInput)
     .pipe(sass())
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(gulp.dest(paths.stylesDist))
 });
 

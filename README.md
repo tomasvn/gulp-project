@@ -32,3 +32,4 @@ npm install
 
 ## Update - v0.5.0
 - [x] Set up browser-sync in dev task
+- [x] Add build task

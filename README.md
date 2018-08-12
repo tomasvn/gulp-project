@@ -8,11 +8,11 @@ npm install
 
 ## Tasks
 
-1. Development task - ```npm run dev```
-2. Developement server - ```npm run dev:server``` [WIP]
-3. Linting CSS - ```npm run lint:css``` [WIP]
-4. Linting JS - ```npm run lint:js``` [WIP]
-5. Build task - ```npm run build``` [WIP]
+1. Development task - ```npm run dev``` ✔️
+2. Developement server - ```npm run dev:server``` [**WIP**]
+3. Linting CSS - ```npm run lint:css``` ✔️
+4. Linting JS - ```npm run lint:js``` [**WIP**]
+5. Build task - ```npm run build``` [**WIP**]
 6. Clean task - ```npm run clean```
 
 ## TODO - Work In Progress

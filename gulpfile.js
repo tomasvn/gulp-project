@@ -23,8 +23,8 @@ gulp.task('watch', ['styles'], function() {
     server: './src' //Input folder we want to serve to the browser
   });
 
-  gulp.watch(['./src/scss/*.scss'], ['styles']); //Watch - it will run the styles task on file change
-  gulp.watch(['./src/*.html']).on('change', browserSync.reload); //Watch changes in HTML file and reload it browser
+  gulp.watch('./src/scss/*.scss', ['styles']); //Watch - it will run the styles task on file change
+  gulp.watch('./src/*.html').on('change', browserSync.reload); //Watch changes in HTML file and reload it browser
 });
 
 gulp.task('clean', function() {

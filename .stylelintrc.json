@@ -13,7 +13,6 @@
     "color-hex-case": "lower",
     "color-hex-length": "short",
     "color-named": "never",
-    "selector-no-id": true,
     "selector-combinator-space-after": "always",
     "selector-attribute-quotes": "always",
     "selector-attribute-operator-space-before": "always",
@@ -29,13 +28,13 @@
     "comment-empty-line-before": "always",
     "selector-pseudo-element-colon-notation": "double",
     "selector-pseudo-class-parentheses-space-inside": "never",
-    "max-nesting-depth": "3",
+    "max-nesting-depth": 4,
     "media-feature-range-operator-space-before": "always",
     "media-feature-range-operator-space-after": "always",
     "media-feature-parentheses-space-inside": "never",
     "media-feature-colon-space-before": "never",
     "media-feature-colon-space-after": "always",
     "selector-max-specificity": "0,4,0",
-    "unit-whitelist": ["em", "rems", "px", "fr"]
+    "unit-whitelist": ["em", "rems", "px", "fr", "%"]
   }
 }

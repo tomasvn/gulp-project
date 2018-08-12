@@ -13,9 +13,6 @@ var autoprefixer = require('gulp-autoprefixer');
 var stylesPath = './src/scss/*.scss';
 var indexPath = './src/*.html';
 
-var stylesPath = './src/scss/*.scss';
-var indexPath = './src/*.html';
-
 /**
 Developement Tasks
 */

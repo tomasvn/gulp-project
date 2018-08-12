@@ -7,6 +7,7 @@
     "dev": "gulp watch",
     "lint:css": "stylelint ./src/**/*.scss  || true",
     "lint:js": "",
+    "build": "gulp build",
     "clean:dev": "",
     "clean:build": "gulp clean"
   },
@@ -29,6 +30,7 @@
     "browser-sync": "^2.24.6",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-sass": "^4.0.1",
     "husky": "^1.0.0-rc.13",
     "stylelint": "^9.4.0",

@@ -17,7 +17,7 @@ npm install
 
 ## TODO - Work In Progress
 - [ ] Set up browser-sync in dev task
-- [x] Set up SCSS/CSS linting
+- [x] ~~Set up SCSS/CSS linting~~
 - [ ] Set up JS linting
 - [ ] Set up pre-commit hook to enforce linting process
 - [ ] Set up image optimization in build task

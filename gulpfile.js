@@ -13,7 +13,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var config = {
   stylesInput: './src/scss/*.scss',
   stylesOutput: './src/styles',
-  indexPath: './src/*.html'
+  srcHtml: './src/*.html'
 }
 
 /**
@@ -35,7 +35,7 @@ gulp.task('watch', ['styles'], function() {
   });
 
   gulp.watch(config.stylesInput, ['styles']); //Watch - it will run the styles task on file change
-  gulp.watch(config.indexPath).on('change', browserSync.reload); //Watch changes in HTML file and reload it browser
+  gulp.watch(config.srcHtml).on('change', browserSync.reload); //Watch changes in HTML file and reload it browser
 });
 
 /**
@@ -43,7 +43,7 @@ Build Tasks
 */
 
 gulp.task('build:html', function() {
-  return gulp.src(indexPath)
+  return gulp.src(srcHtml)
     .pipe(gulp.dest('./dist'))
 });
 

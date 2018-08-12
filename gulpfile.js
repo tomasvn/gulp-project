@@ -21,7 +21,7 @@ var paths = {
 Developement Tasks
 */
 
-gulp.task('styles', function() { //First argument is the name of the task, second argument callback function
+gulp.task('dev:styles', function() { //First argument is the name of the task, second argument callback function
   return gulp.src(paths.stylesInput) //Look into this folder for any SCSS files
     .pipe(sass())
     .pipe(sass.sync().on('error', sass.logError)) //If SCSS syntax has any error output it to the CLI
@@ -29,13 +29,13 @@ gulp.task('styles', function() { //First argument is the name of the task, secon
     .pipe(browserSync.stream())
 });
 
-gulp.task('watch', ['styles'], function() {
+gulp.task('watch', ['dev:styles'], function() {
   
   browserSync.init({ //Initialize browser sync
     server: './src' //Input folder we want to serve to the browser
   });
 
-  gulp.watch(paths.stylesInput, ['styles']); //Watch - it will run the styles task on file change
+  gulp.watch(paths.stylesInput, ['dev:styles']); //Watch - it will run the styles task on file change
   gulp.watch(paths.srcHtml).on('change', browserSync.reload); //Watch changes in HTML file and reload it browser
 });
 
@@ -48,11 +48,13 @@ gulp.task('build:html', function() {
     .pipe(gulp.dest('./dist'))
 });
 
-gulp.task('build', ['build:html'], function() {
-  return gulp.src(paths.stylesPath)
+gulp.task('build:styles', function() {
+  return gulp.src(paths.stylesInput)
     .pipe(sass())
-    .pipe(gulp.dest('./dist/styles'))
+    .pipe(gulp.dest(paths.stylesDist))
 });
+
+gulp.task('build', ['build:html', 'build:styles']);
 
 /**
 Clean Tasks

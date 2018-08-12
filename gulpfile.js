@@ -1,5 +1,5 @@
 /*
-Basic Gulp Workflow v0.5.0
+Basic Gulp Workflow v0.6.0
 Created by: Ngoc Tu Nguyen <nguyenngoct2112@gmail.com>
 Github Repo: https://github.com/tomasvn/gulp-project.git
 **/
@@ -8,6 +8,13 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create(); //Create browser sync instance
 var sass = require('gulp-sass');
 var del = require('del');
+
+var stylesPath = './src/scss/*.scss';
+var indexPath = './src/*.html';
+
+/**
+Developement Tasks
+*/
 
 gulp.task('styles', function() { //First argument is the name of the task, second argument callback function
   return gulp.src('./src/scss/*.scss') //Look into this folder for any SCSS files
@@ -27,6 +34,24 @@ gulp.task('watch', ['styles'], function() {
   gulp.watch('./src/*.html').on('change', browserSync.reload); //Watch changes in HTML file and reload it browser
 });
 
+/**
+Build Tasks
+*/
+
+gulp.task('build:html', function() {
+  return gulp.src(indexPath)
+    .pipe(gulp.dest('./dist'))
+});
+
+gulp.task('build', ['build:html'], function() {
+  return gulp.src(stylesPath)
+    .pipe(sass())
+    .pipe(gulp.dest('./dist/styles'))
+});
+
+/**
+Clean Tasks
+*/
 gulp.task('clean', function() {
-  return del(['dist/styles', 'dist/scripts', 'dist/images']); //Delete particular files in dist folder
+  return del(['dist']); //Delete dist folder
 });

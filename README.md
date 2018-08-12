@@ -19,7 +19,7 @@ npm install
 - [ ] Set up browser-sync in dev task
 - [x] ~~Set up SCSS/CSS linting~~
 - [ ] Set up JS linting
-- [ ] Set up pre-commit hook to enforce linting process
+- [x] ~~Set up pre-commit hook to enforce linting process~~
 - [ ] Set up image optimization in build task
 - [ ] Set up minification CSS/JS in build task
 - [ ] Set up autoprefixer

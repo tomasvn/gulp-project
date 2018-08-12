@@ -56,6 +56,11 @@ gulp.task('build', ['build:html'], function() {
 /**
 Clean Tasks
 */
+
+gulp.task('clean:dev', function() {
+  return del(['./src/styles']);
+});
+
 gulp.task('clean', function() {
   return del(['dist']); //Delete dist folder
 });

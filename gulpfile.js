@@ -8,6 +8,10 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create(); //Create browser sync instance
 var sass = require('gulp-sass');
 var del = require('del');
+var autoprefixer = require('gulp-autoprefixer');
+
+var stylesPath = './src/scss/*.scss';
+var indexPath = './src/*.html';
 
 var stylesPath = './src/scss/*.scss';
 var indexPath = './src/*.html';
@@ -17,7 +21,7 @@ Developement Tasks
 */
 
 gulp.task('styles', function() { //First argument is the name of the task, second argument callback function
-  return gulp.src('./src/scss/*.scss') //Look into this folder for any SCSS files
+  return gulp.src(stylesPath) //Look into this folder for any SCSS files
     .pipe(sass())
     .pipe(sass.sync().on('error', sass.logError)) //If SCSS syntax has any error output it to the CLI
     .pipe(gulp.dest('./src/styles')) //Compile SCSS files into one CSS file, output it here

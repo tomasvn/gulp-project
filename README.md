@@ -19,7 +19,7 @@ npm install
 - [ ] Set up JS linting
 - [ ] Set up image optimization in build task
 - [ ] Set up minification CSS/JS in build task
-- [ ] Set up autoprefixer
+- [ ] Set up autoprefixer in build task
 
 ## Update - v0.2.0
 - [x] Redo Gulp Tasks
@@ -32,5 +32,6 @@ npm install
 
 ## Update - v0.5.0
 - [x] Set up browser-sync in dev task
-- [x] Add build task
+- [x] Add initial build task
 - [x] Add dev clean task
+- [x] Fix paths variable

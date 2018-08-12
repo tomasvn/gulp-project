@@ -17,12 +17,17 @@ npm install
 
 ## TODO - Work In Progress
 - [ ] Set up browser-sync in dev task
-- [ ] Set up linting
+- [x] Set up SCSS/CSS linting
+- [ ] Set up JS linting
+- [ ] Set up pre-commit hook to enforce linting process
 - [ ] Set up image optimization in build task
 - [ ] Set up minification CSS/JS in build task
 - [ ] Set up autoprefixer
 
-## Update - v1.2.4
+## Update - v0.2.0
 - [x] Redo Gulp Tasks
 - [x] Correctly set up gulp watch
 - [x] Add comments to the gulp file
+
+## Update - v0.4.0
+- [x] Set up stylelint for SCSS/CSS

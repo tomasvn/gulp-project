@@ -18,7 +18,8 @@ npm install
 ## TODO - Work In Progress
 - [ ] Set up JS linting
 - [ ] Set up image optimization in build task
-- [ ] Set up minification CSS/JS in build task
+- [ ] Set up minification CSS in build task
+- [ ] Set up minification JS in build task
 
 ## Update - v0.2.0
 - [x] Redo Gulp Tasks

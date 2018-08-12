@@ -7,8 +7,8 @@
     "dev": "gulp watch",
     "lint:css": "stylelint ./src/**/*.scss  || true",
     "lint:js": "",
-    "dev:clean": "",
-    "build:clean": "gulp clean"
+    "clean:dev": "",
+    "clean:build": "gulp clean"
   },
   "husky": {
     "hooks": {

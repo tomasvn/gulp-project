@@ -48,7 +48,7 @@ npm install
 - [ ] Set up minification JS in build
 - [ ] Set up Source Maps in build
 - [ ] Inlining Critical-CSS in build
-- [ ] Set up linting with --fix option, to fix all linting issues
+- [x] Set up linting with --fix option, to fix all linting issues
 
 ---
 ## [MIT License](LICENSE.md)

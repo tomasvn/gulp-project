@@ -47,6 +47,7 @@ npm install
 - [x] Set up minification CSS in build
 - [ ] Set up minification JS in build
 - [ ] Set up Source Maps in build
+- [ ] Inlining Critical-CSS in build
 
 ---
 ## [MIT License](LICENSE.md)

@@ -42,12 +42,13 @@ npm install
 - [x] Set up autoprefixer in build task
 
 ### Update - v0.6.0
-- [ ] Set up JS linting
+- [x] Set up JS linting
 - [ ] Set up image optimization in build
 - [x] Set up minification CSS in build
 - [ ] Set up minification JS in build
 - [ ] Set up Source Maps in build
 - [ ] Inlining Critical-CSS in build
+- [ ] Set up linting with --fix flag, to fix all problems
 
 ---
 ## [MIT License](LICENSE.md)

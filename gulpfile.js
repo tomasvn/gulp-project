@@ -26,6 +26,7 @@ gulp.task('dev:styles', function() { //First argument is the name of the task, s
   return gulp.src(paths.stylesInput) //Look into this folder for any SCSS files
     .pipe(sass())
     .pipe(sass.sync().on('error', sass.logError)) //If SCSS syntax has any error output it to the CLI
+    .pipe(sass({outputStyle: 'expanded'}))
     .pipe(gulp.dest(paths.stylesOutput)) //Compile SCSS files into one CSS file, output it here
     .pipe(browserSync.stream())
 });

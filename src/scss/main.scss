@@ -1,15 +1,17 @@
+@import 'variables/variables';
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  background-color: #ccc;
+  background-color: $light-grey;
   margin: 0;
   padding: 0;
   display: flex;
 
   h1 {
-    color: #ff5964;
+    color: $light-red;
     font-size: 30px;
     font-family: "Courier New", Courier, monospace;
     font-weight: 700;

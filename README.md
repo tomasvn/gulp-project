@@ -38,4 +38,4 @@ npm install
 - [ ] Set up minification JS in build
 - [ ] Set up Source Maps in build
 
-[MIT License](LICENSE.md)
+## [MIT License](LICENSE.md)

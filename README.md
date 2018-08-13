@@ -33,6 +33,7 @@ npm install
 
 ## Update - v0.6.0
 - [ ] Set up JS linting
-- [ ] Set up image optimization in build task
-- [x] Set up minification CSS in build task
-- [ ] Set up minification JS in build task
+- [ ] Set up image optimization in build
+- [x] Set up minification CSS in build
+- [ ] Set up minification JS in build
+- [ ] Set up Source Maps in build

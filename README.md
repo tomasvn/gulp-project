@@ -16,7 +16,7 @@ npm install
 
 1. Dev task & run dev server + Hot Reload - ```npm run dev``` ✔️
 3. Linting CSS - ```npm run lint:css``` ✔️
-4. Linting JS - ```npm run lint:js``` [**WIP**]
+4. Linting JS - ```npm run lint:js``` ✔️
 5. Build task - ```npm run build``` ✔️
 6. Clean dev folder - ```npm run clean:dev``` ✔️
 7. Clean build folder - ```npm run clean:build``` ✔️
@@ -48,7 +48,7 @@ npm install
 - [ ] Set up minification JS in build
 - [ ] Set up Source Maps in build
 - [ ] Inlining Critical-CSS in build
-- [ ] Set up linting with --fix flag, to fix all problems
+- [ ] Set up linting with --fix option, to fix all linting issues
 
 ---
 ## [MIT License](LICENSE.md)

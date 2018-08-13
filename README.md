@@ -15,12 +15,6 @@ npm install
 6. Clean dev folder - ```npm run clean:dev``` ✔️
 7. Clean build folder - ```npm run clean:build``` ✔️
 
-## TODO - Work In Progress
-- [ ] Set up JS linting
-- [ ] Set up image optimization in build task
-- [ ] Set up minification CSS in build task
-- [ ] Set up minification JS in build task
-
 ## Update - v0.2.0
 - [x] Redo Gulp Tasks
 - [x] Correctly set up gulp watch
@@ -36,3 +30,9 @@ npm install
 - [x] Add dev clean task
 - [x] Fix paths variable
 - [x] Set up autoprefixer in build task
+
+## Update - v0.6.0
+- [ ] Set up JS linting
+- [ ] Set up image optimization in build task
+- [x] Set up minification CSS in build task
+- [ ] Set up minification JS in build task

@@ -1,14 +1,15 @@
 /*
-Basic Gulp Workflow v0.5.0
+Basic Gulp Workflow v0.6.0
 Created by: Ngoc Tu Nguyen <nguyenngoct2112@gmail.com>
 Github Repo: https://github.com/tomasvn/gulp-project.git
 **/
 
 var gulp = require('gulp');
-var browserSync = require('browser-sync').create(); //Create browser sync instance
 var sass = require('gulp-sass');
-var del = require('del');
 var autoprefixer = require('gulp-autoprefixer');
+var cssnano = require('gulp-cssnano');
+var browserSync = require('browser-sync').create(); //Create browser sync instance
+var del = require('del');
 
 var paths = {
   stylesInput: './src/scss/*.scss',
@@ -49,12 +50,14 @@ gulp.task('build:html', function() {
 });
 
 gulp.task('build:styles', function() {
+  
   return gulp.src(paths.stylesInput)
     .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    .pipe(cssnano())
     .pipe(gulp.dest(paths.stylesDist))
 });
 

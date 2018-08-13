@@ -12,7 +12,7 @@ npm install
 
 ![folders](https://i.imgur.com/7GY1ihH.png "folders")
 
-## Tasks
+## NPM Scripts
 
 1. Dev task & run dev server + Hot Reload - ```npm run dev``` ✔️
 3. Linting CSS - ```npm run lint:css``` ✔️
@@ -20,6 +20,7 @@ npm install
 5. Build task - ```npm run build``` ✔️
 6. Clean dev folder - ```npm run clean:dev``` ✔️
 7. Clean build folder - ```npm run clean:build``` ✔️
+8. Autofix linting issues - ```npm run lint:fix``` ️✔️
 
 ---
 

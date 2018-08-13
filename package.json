@@ -7,6 +7,7 @@
     "dev": "gulp watch",
     "lint:css": "stylelint ./src/**/*.scss  || true",
     "lint:js": "standard ./src/**/*.js || true",
+    "lint:fix": "stylelint --fix ./src/**/*.scss && standard --fix ./src/**/*.js",
     "build": "gulp build",
     "dev:clean": "gulp clean:dev",
     "build:clean": "gulp clean"

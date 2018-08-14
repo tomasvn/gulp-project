@@ -12,6 +12,9 @@ npm install
 
 ![folders](https://i.imgur.com/7GY1ihH.png "folders")
 
+**Preparing index file for build task**
+1. Wrap script tag around ```<!--build:js output-folder-for-js -->``` and close the build tag as follows ```<!-- endbuild -->```
+
 ## NPM Scripts
 
 1. Dev task & run dev server + Hot Reload - ```npm run dev``` ✔️
@@ -46,7 +49,7 @@ npm install
 - [x] Set up JS linting
 - [ ] Set up image optimization in build
 - [x] Set up minification CSS in build
-- [ ] Set up minification JS in build
+- [x] Set up minification JS in build
 - [ ] Set up Source Maps in build
 - [ ] Inlining Critical-CSS in build
 - [x] Set up linting with --fix option, to fix all linting issues

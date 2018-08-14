@@ -4,84 +4,86 @@ Created by: Ngoc Tu Nguyen <nguyenngoct2112@gmail.com>
 Github Repo: https://github.com/tomasvn/gulp-project.git
 **/
 
+/*
+Gulp Plugins
+**/
+
 var gulp = require('gulp')
 var sass = require('gulp-sass')
+var gulpConfig = require('./gulp-config.js')
 var autoprefixer = require('gulp-autoprefixer')
 var cssnano = require('gulp-cssnano')
 var browserSync = require('browser-sync').create() // Create browser sync instance
 var del = require('del')
+var useref = require('gulp-useref')
+var uglify = require('gulp-uglify')
+var gulpIf = require('gulp-if')
 
-var paths = {
-  stylesInput: './src/scss/*.scss',
-  stylesOutput: './src/styles',
-  stylesDist: 'dist/styles',
-  srcHtml: './src/*.html',
-  jsInput: '.src/js/*.js',
-  jsDist: './dist/js/*.js'
-}
+/**
+Gulp config variables
+*/
+
+var src = gulpConfig.paths.src
+var dist = gulpConfig.paths.dist
+var distRoot = gulpConfig.paths.distRoot
+var srcRoot = gulpConfig.paths.srcRoot
 
 /**
 Developement Tasks
 */
 
 gulp.task('dev:styles', function () { // First argument is the name of the task, second argument callback function
-  return gulp.src(paths.stylesInput) // Look into this folder for any SCSS files
+  return gulp.src(src.stylesFiles) // Look into this folder for any SCSS files
     .pipe(sass())
     .pipe(sass.sync().on('error', sass.logError)) // If SCSS syntax has any error output it to the CLI
     .pipe(sass({outputStyle: 'expanded'}))
-    .pipe(gulp.dest(paths.stylesOutput)) // Compile SCSS files into one CSS file, output it here
+    .pipe(gulp.dest(src.stylesOutput)) // Compile SCSS files into one CSS file, output it here
     .pipe(browserSync.stream())
 })
 
 gulp.task('watch', ['dev:styles'], function () {
   browserSync.init({ // Initialize browser sync
-    server: './src' // Input folder we want to serve to the browser
+    server: srcRoot // Input folder we want to serve to the browser
   })
 
-  gulp.watch(paths.stylesInput, ['dev:styles']) // Watch - it will run the styles task on file change
-  gulp.watch(paths.srcHtml).on('change', browserSync.reload) // Watch changes in HTML file and reload it browser
+  gulp.watch(src.stylesFiles, ['dev:styles']) // Watch - it will run the styles task on file change
+  gulp.watch(src.htmlFiles).on('change', browserSync.reload) // Watch changes in HTML file and reload it browser
 })
 
 /**
 Build Tasks
 */
 
-gulp.task('build:html', function () {
-  return gulp.src(paths.srcHtml)
-    .pipe(gulp.dest('./dist'))
+gulp.task('build:static', function () {
+  return gulp.src(src.htmlFiles)
+    .pipe(useref()) // Concat files to single file
+    .pipe(gulpIf('*.js', uglify())) // Minify only if it is a JS file
+    .pipe(gulp.dest(distRoot))
 })
 
 gulp.task('build:styles', function () {
-  return gulp.src(paths.stylesInput)
+  return gulp.src(src.stylesFiles)
     .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['last 5 versions'],
       cascade: false
     }))
-    .pipe(cssnano())
-    .pipe(gulp.dest(paths.stylesDist))
+    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulp.dest(dist.stylesDist))
 })
-
-/* gulp.task('build:js', function () {
-  return gulp.src(paths.jsInput)
-    .pipe() // UglifyJS
-    .pipe() // Minify
-    .pipe() // Source Maps
-    .pipe(gulp.dest(paths.jsDist))
-}) */
 
 /* gulp.task('optimize', function () {
   return gulp.src()
 }) */
 
-gulp.task('build', ['build:html', 'build:styles'])
+gulp.task('build', ['build:static', 'build:styles'])
 
 /**
 Clean Tasks
 */
 
 gulp.task('clean:dev', function () {
-  return del([paths.stylesOutput])
+  return del([src.stylesOutput])
 })
 
 gulp.task('clean', function () {

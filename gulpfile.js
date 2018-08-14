@@ -18,6 +18,7 @@ var del = require('del')
 var useref = require('gulp-useref')
 var uglify = require('gulp-uglify')
 var gulpIf = require('gulp-if')
+var imagemin = require('gulp-imagemin')
 
 /**
 Gulp config variables
@@ -72,11 +73,20 @@ gulp.task('build:styles', function () {
     .pipe(gulp.dest(dist.stylesDist))
 })
 
-/* gulp.task('optimize', function () {
-  return gulp.src()
-}) */
+gulp.task('optimize', function () {
+  return gulp.src(src.imgFiles)
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.svgo({
+        plugins: [{removeDoctype: true}, {removeDesc: true}, {removeViewBox: true}]
+      })
+    ]))
+    .pipe(gulp.dest(dist.imgDist))
+})
 
-gulp.task('build', ['build:static', 'build:styles'])
+gulp.task('build', ['build:static', 'build:styles', 'optimize'])
 
 /**
 Clean Tasks

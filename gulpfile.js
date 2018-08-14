@@ -62,9 +62,7 @@ gulp.task('build:styles', function () {
   return gulp.src()
 }) */
 
-gulp.task('build', ['build:html', 'build:styles'], function () {
-  console.log('Building files...')
-})
+gulp.task('build', ['build:html', 'build:styles'])
 
 /**
 Clean Tasks

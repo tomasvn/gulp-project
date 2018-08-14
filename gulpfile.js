@@ -4,17 +4,26 @@ Created by: Ngoc Tu Nguyen <nguyenngoct2112@gmail.com>
 Github Repo: https://github.com/tomasvn/gulp-project.git
 **/
 
+/*
+Gulp Plugins
+**/
+
 var gulp = require('gulp')
 var sass = require('gulp-sass')
 var gulpConfig = require('./gulp-config.js')
-var src = gulpConfig.paths.src
-var dist = gulpConfig.paths.dist
-var distRoot = gulpConfig.paths.distRoot
-var srcRoot = gulpConfig.paths.srcRoot
 var autoprefixer = require('gulp-autoprefixer')
 var cssnano = require('gulp-cssnano')
 var browserSync = require('browser-sync').create() // Create browser sync instance
 var del = require('del')
+
+/**
+Gulp config variables
+*/
+
+var src = gulpConfig.paths.src
+var dist = gulpConfig.paths.dist
+var distRoot = gulpConfig.paths.distRoot
+var srcRoot = gulpConfig.paths.srcRoot
 
 /**
 Developement Tasks

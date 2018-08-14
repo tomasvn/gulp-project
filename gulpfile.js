@@ -68,7 +68,7 @@ gulp.task('build:styles', function () {
       browsers: ['last 5 versions'],
       cascade: false
     }))
-    .pipe(cssnano())
+    .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest(dist.stylesDist))
 })
 

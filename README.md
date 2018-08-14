@@ -12,6 +12,9 @@ npm install
 
 ![folders](https://i.imgur.com/7GY1ihH.png "folders")
 
+**Preparing index file for build task**
+1. Wrap script tag around ```<!--build:js output-folder-for-js -->``` and close the build tag as follows ```<!-- endbuild -->```
+
 ## NPM Scripts
 
 1. Dev task & run dev server + Hot Reload - ```npm run dev``` ✔️

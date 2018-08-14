@@ -15,6 +15,9 @@ var autoprefixer = require('gulp-autoprefixer')
 var cssnano = require('gulp-cssnano')
 var browserSync = require('browser-sync').create() // Create browser sync instance
 var del = require('del')
+var useref = require('gulp-useref')
+var uglify = require('gulp-uglify')
+var gulpIf = require('gulp-if')
 
 /**
 Gulp config variables
@@ -51,8 +54,10 @@ gulp.task('watch', ['dev:styles'], function () {
 Build Tasks
 */
 
-gulp.task('build:html', function () {
+gulp.task('build:static', function () {
   return gulp.src(src.htmlFiles)
+    .pipe(useref()) // Concat files to single file
+    .pipe(gulpIf('*.js', uglify())) // Minify only if it is a JS file
     .pipe(gulp.dest(distRoot))
 })
 
@@ -71,7 +76,7 @@ gulp.task('build:styles', function () {
   return gulp.src()
 }) */
 
-gulp.task('build', ['build:html', 'build:styles'])
+gulp.task('build', ['build:static', 'build:styles'])
 
 /**
 Clean Tasks

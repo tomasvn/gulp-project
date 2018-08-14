@@ -17,7 +17,7 @@ var paths = {
   stylesDist: 'dist/styles',
   srcHtml: './src/*.html',
   jsInput: '.src/js/*.js',
-  jsDist: './dist/js/*.js'
+  jsDist: './dist/js/'
 }
 
 /**
@@ -62,19 +62,13 @@ gulp.task('build:styles', function () {
     .pipe(gulp.dest(paths.stylesDist))
 })
 
-/* gulp.task('build:js', function () {
-  return gulp.src(paths.jsInput)
-    .pipe() // UglifyJS
-    .pipe() // Minify
-    .pipe() // Source Maps
-    .pipe(gulp.dest(paths.jsDist))
-}) */
-
 /* gulp.task('optimize', function () {
   return gulp.src()
 }) */
 
-gulp.task('build', ['build:html', 'build:styles'])
+gulp.task('build', ['build:html', 'build:styles'], function () {
+  console.log('Building files...');
+})
 
 /**
 Clean Tasks

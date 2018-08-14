@@ -8,12 +8,13 @@ npm install
 
 ## Before Using Gulp
 
-**Your folder structure should be as follow, as gulp tasks are made based on this folder structure**
+**__Your folder structure should be as follow, as gulp tasks are made based on this folder structure__**
 
 ![folders](https://i.imgur.com/7GY1ihH.png "folders")
 
 **Preparing index file for build task**
-1. Wrap script tag around ```<!--build:js output-folder-for-js -->``` and close the build tag as follows ```<!-- endbuild -->```
+1. _Wrap script tag around_ ```<!--build:js output-folder-for-js -->``` _and close the build tag as follows_ ```<!-- endbuild -->```
+ * Eg. ```<!--build:js js/main.min.js--> <!--endbuild-->``` This file will be later on injected in output HTML ```<script></script>``` body
 
 ## NPM Scripts
 

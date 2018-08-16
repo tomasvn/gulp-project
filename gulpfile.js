@@ -19,6 +19,7 @@ var useref = require('gulp-useref')
 var uglify = require('gulp-uglify')
 var gulpIf = require('gulp-if')
 var imagemin = require('gulp-imagemin')
+var runSequence = require('run-sequence')
 
 /**
 Gulp config variables
@@ -52,6 +53,18 @@ gulp.task('watch', ['dev:styles'], function () {
 })
 
 /**
+Clean Tasks
+*/
+
+gulp.task('clean:dev', function () {
+  return del([src.stylesOutput])
+})
+
+gulp.task('clean', function () {
+  return del(['dist']) // Delete dist folder
+})
+
+/**
 Build Tasks
 */
 
@@ -73,6 +86,11 @@ gulp.task('build:styles', function () {
     .pipe(gulp.dest(dist.stylesDist))
 })
 
+gulp.task('build:fonts', function () {
+  return gulp.src(src.fontsFiles)
+    .pipe(gulp.dest(dist.fontsDist))
+})
+
 gulp.task('optimize', function () {
   return gulp.src(src.imgFiles)
     .pipe(imagemin([
@@ -86,16 +104,10 @@ gulp.task('optimize', function () {
     .pipe(gulp.dest(dist.imgDist))
 })
 
-gulp.task('build', ['build:static', 'build:styles', 'optimize'])
-
-/**
-Clean Tasks
-*/
-
-gulp.task('clean:dev', function () {
-  return del([src.stylesOutput])
+gulp.task('build', function (callback) {
+  runSequence('clean', ['build:static', 'build:styles', 'build:fonts', 'optimize'],
+    callback
+  )
 })
 
-gulp.task('clean', function () {
-  return del(['dist']) // Delete dist folder
-})
+// gulp.task('build', ['build:clean', 'build:static', 'build:styles', 'build:fonts', 'optimize'])

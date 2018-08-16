@@ -5,12 +5,14 @@ module.exports = {
       stylesFiles: './src/scss/*.scss',
       stylesOutput: './src/styles',
       htmlFiles: './src/*.html',
-      jsFiles: '.src/js/*.js'
+      jsFiles: '.src/js/*.js',
+      fontsFiles: '.src/fonts/**/*'
     },
     dist: {
       imgDist: './dist/images',
       stylesDist: 'dist/styles',
-      jsDist: './dist/js/'
+      jsDist: './dist/js/',
+      fontsDist: '/dist/fonts'
     },
     srcRoot: './src',
     distRoot: './dist'

@@ -53,7 +53,7 @@ npm install
 - [x] Set up minification JS in build
 - [ ] ~~Set up Source Maps in build~~
 - [ ] Inlining Critical-CSS in build
-- [ ] Copy fonts task in build
+- [x] Copy fonts task in build
 - [x] Set up linting with --fix option, to fix all linting issues
 
 ---

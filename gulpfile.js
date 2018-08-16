@@ -110,4 +110,3 @@ gulp.task('build', function (callback) {
   )
 })
 
-// gulp.task('build', ['build:clean', 'build:static', 'build:styles', 'build:fonts', 'optimize'])

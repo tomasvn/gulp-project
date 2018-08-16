@@ -51,7 +51,7 @@ npm install
 - [x] Set up image optimization in build
 - [x] Set up minification CSS in build
 - [x] Set up minification JS in build
-- [ ] Set up Source Maps in build
+- [x] Set up Source Maps in build
 - [ ] Inlining Critical-CSS in build
 - [x] Set up linting with --fix option, to fix all linting issues
 

@@ -1,12 +1,12 @@
 {
   "name": "gulp-project",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Gulp Project",
   "main": "index.js",
   "scripts": {
     "dev": "gulp watch || true",
-    "lint:css": "stylelint ./src/**/*.scss  || true",
-    "lint:js": "standard ./src/**/*.js || true",
+    "lint:css": "stylelint ./src/**/*.scss",
+    "lint:js": "standard ./src/**/*.js",
     "lint:fix": "stylelint --fix ./src/**/*.scss && standard --fix ./src/**/*.js",
     "build": "gulp build",
     "dev:clean": "gulp clean:dev",
@@ -14,7 +14,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:css && npm run lint:js"
+      "pre-commit": "npm run lint:css --silent && npm run lint:js --silent"
     }
   },
   "repository": {

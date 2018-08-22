@@ -54,10 +54,15 @@ npm install
 - [x] Copy fonts task in build
 - [x] Set up linting with --fix option, to fix all linting issues
 
-### Future Update - v0.6.1
+## Future Update 
+
+### v0.7.0
 - [ ] Set up source maps in build
 - [ ] Inline critical css in build [inline-critical](https://github.com/addyosmani/critical)
+
+### v0.7.1
 - [ ] Add files size to output - which will log out the full size [gulp-size](https://www.npmjs.com/package/gulp-size)
+- [ ] Add gulp notify - add notification output to ```.pipe()``` stream in gulp tasks [gulp-notify](https://www.npmjs.com/package/gulp-notify)
 
 ---
 ## [MIT License](LICENSE.md)

@@ -30,23 +30,23 @@ npm install
 
 ## Changelog
 
-### Update - v0.2.0
+### v0.2.0
 - [x] Redo Gulp Tasks
 - [x] Correctly set up gulp watch
 - [x] Add comments to the gulp file
 
-### Update - v0.4.0
+### v0.4.0
 - [x] Set up stylelint for SCSS/CSS
 - [x] Set up HUSKY Git Hook (Enforcing linting)
 
-### Update - v0.5.0
+### v0.5.0
 - [x] Set up browser-sync in dev task
 - [x] Add initial build task
 - [x] Add dev clean task
 - [x] Fix paths variable
 - [x] Set up autoprefixer in build task
 
-### Update - v0.6.0
+### v0.6.0
 - [x] Set up JS linting
 - [x] Set up image optimization in build
 - [x] Set up minification CSS in build

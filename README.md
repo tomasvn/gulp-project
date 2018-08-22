@@ -56,8 +56,8 @@ npm install
 
 ### Future Update - v0.6.1
 - [ ] Set up source maps in build
-- [ ] Inline critical css in build
-- [ ] Add files size to output - which will log out the full size
+- [ ] Inline critical css in build [inline-critical](https://github.com/addyosmani/critical)
+- [ ] Add files size to output - which will log out the full size [gulp-size](https://www.npmjs.com/package/gulp-size)
 
 ---
 ## [MIT License](LICENSE.md)

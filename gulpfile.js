@@ -9,8 +9,8 @@ Gulp Plugins
 **/
 
 var gulp = require('gulp')
-var sass = require('gulp-sass')
 var gulpConfig = require('./gulp-config.js')
+var sass = require('gulp-sass')
 var autoprefixer = require('gulp-autoprefixer')
 var cssnano = require('gulp-cssnano')
 var browserSync = require('browser-sync').create() // Create browser sync instance
@@ -20,6 +20,8 @@ var uglify = require('gulp-uglify')
 var gulpIf = require('gulp-if')
 var imagemin = require('gulp-imagemin')
 var runSequence = require('run-sequence')
+var size = require('gulp-size')
+var notify = require('gulp-notify')
 
 /**
 Gulp config variables
@@ -72,7 +74,9 @@ gulp.task('build:static', function () {
   return gulp.src(src.htmlFiles)
     .pipe(useref()) // Concat files to single file
     .pipe(gulpIf('*.js', uglify())) // Minify only if it is a JS file
+    .pipe(size())
     .pipe(gulp.dest(distRoot))
+    .pipe(notify({message: 'Building static files...'}))
 })
 
 gulp.task('build:styles', function () {
@@ -84,11 +88,13 @@ gulp.task('build:styles', function () {
     }))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest(dist.stylesDist))
+    .pipe(notify({message: 'Building style files...'}))
 })
 
 gulp.task('build:fonts', function () {
   return gulp.src(src.fontsFiles)
     .pipe(gulp.dest(dist.fontsDist))
+    .pipe(notify({message: 'Copying fonts...'}))
 })
 
 gulp.task('optimize', function () {
@@ -102,6 +108,7 @@ gulp.task('optimize', function () {
       })
     ]))
     .pipe(gulp.dest(dist.imgDist))
+    .pipe(notify({message: 'Image optimization...'}))
 })
 
 gulp.task('build', function (callback) {

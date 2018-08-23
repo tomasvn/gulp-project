@@ -61,8 +61,8 @@ npm install
 - [ ] Inline critical css in build [inline-critical](https://github.com/addyosmani/critical)
 
 ### v0.7.1
-- [ ] Add files size to output - which will log out the full size [gulp-size](https://www.npmjs.com/package/gulp-size)
-- [ ] Add gulp notify - add notification output to ```.pipe()``` stream in gulp tasks [gulp-notify](https://www.npmjs.com/package/gulp-notify)
+- [x] Add files size to output - which will log out the full size [gulp-size](https://www.npmjs.com/package/gulp-size)
+- [x] Add gulp notify - add notification output to ```.pipe()``` stream in gulp tasks [gulp-notify](https://www.npmjs.com/package/gulp-notify)
 
 ---
 ## [MIT License](LICENSE.md)

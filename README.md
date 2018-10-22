@@ -63,6 +63,7 @@ npm install
 ### v0.7.1
 - [ ] Set up source maps in build
 - [ ] Inline critical css in build [inline-critical](https://github.com/addyosmani/critical)
+- [ ] Set up surge.sh deployment script
 
 ---
 ## [MIT License](LICENSE.md)

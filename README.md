@@ -64,6 +64,7 @@ npm install
 - [ ] Set up source maps in build
 - [ ] Inline critical css in build [inline-critical](https://github.com/addyosmani/critical)
 - [ ] Set up surge.sh deployment script
+- [ ] Set up HUSKY for surge.sh deployment script (Deploy build on pre-push hook)
 
 ---
 ## [MIT License](LICENSE.md)

@@ -63,8 +63,9 @@ npm install
 ### v0.7.1
 - [ ] Set up source maps in build
 - [ ] Inline critical css in build [inline-critical](https://github.com/addyosmani/critical)
-- [ ] Set up surge.sh deployment script
-- [ ] Set up HUSKY for surge.sh deployment script (Deploy build on pre-push hook)
+- [x] Set up surge.sh deployment script *needs more work*
+- [x] Set up HUSKY for surge.sh deployment script (Deploy build on pre-push hook) *needs more work*
+- [ ] Set up babel for compiling basic ES6 features
 
 ---
 ## [MIT License](LICENSE.md)

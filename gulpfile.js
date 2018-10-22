@@ -22,6 +22,7 @@ var imagemin = require('gulp-imagemin')
 var runSequence = require('run-sequence')
 var size = require('gulp-size')
 var notify = require('gulp-notify')
+var surge = require('gulp-surge')
 
 /**
 Gulp config variables
@@ -116,3 +117,10 @@ gulp.task('build', function (callback) {
     callback
   )
 })
+
+/*gulp.task('deploy', function() {
+  return surge({
+    project: './dist',
+    domain: <project-domain-name>
+  })
+})*/

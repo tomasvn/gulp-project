@@ -25,6 +25,7 @@ npm install
 6. Clean dev folder - ```npm run clean:dev``` ✔️
 7. Clean build folder - ```npm run clean:build``` ✔️
 8. Autofix linting issues - ```npm run lint:fix``` ️✔️
+9. Deploy Project - ```npm run deploy``` ❌
 
 ---
 

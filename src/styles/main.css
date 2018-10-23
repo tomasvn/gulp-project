@@ -1,0 +1,15 @@
+h1 {
+  font-size: 14px;
+  color: #ff5964;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #ccc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}

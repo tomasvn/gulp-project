@@ -1,3 +1,4 @@
+@import "config/config";
 @import "variables/variables";
 
 html {
@@ -9,11 +10,4 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-
-  h1 {
-    color: $light-red;
-    font-size: 30px;
-    font-family: "Courier New", Courier, monospace;
-    font-weight: 700;
-  }
 }

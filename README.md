@@ -63,11 +63,13 @@ npm install
 - [x] Set up surge.sh deployment script *needs more work*
 - [x] Set up HUSKY for surge.sh deployment script (Deploy build on pre-push hook) *needs more work*
 
-## Future Update 
+### v0.7.2
+- [x] Set up babel for compiling basic ES6 features
+- [x] Set up source maps in build
 
-- [ ] Set up source maps in build
+## Future Update
+
 - [ ] Inline critical css in build [inline-critical](https://github.com/addyosmani/critical)
-- [ ] Set up babel for compiling basic ES6 features
 - [ ] Set up CSS regression testing tool
   - [backstop.js](https://github.com/garris/BackstopJS)
   - [backstop.js on WP](https://www.christoflee.co.uk/backstopjs-a-beginners-guide-to-testing-in-wordpress/)

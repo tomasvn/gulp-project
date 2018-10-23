@@ -59,12 +59,14 @@ npm install
 - [x] Add files size to output - which will log out the full size [gulp-size](https://www.npmjs.com/package/gulp-size)
 - [x] Add gulp notify - add notification output to ```.pipe()``` stream in gulp tasks [gulp-notify](https://www.npmjs.com/package/gulp-notify)
 
+### v0.7.1
+- [x] Set up surge.sh deployment script *needs more work*
+- [x] Set up HUSKY for surge.sh deployment script (Deploy build on pre-push hook) *needs more work*
+
 ## Future Update 
 
 - [ ] Set up source maps in build
 - [ ] Inline critical css in build [inline-critical](https://github.com/addyosmani/critical)
-- [x] Set up surge.sh deployment script *needs more work*
-- [x] Set up HUSKY for surge.sh deployment script (Deploy build on pre-push hook) *needs more work*
 - [ ] Set up babel for compiling basic ES6 features
 - [ ] Set up CSS regression testing tool [backstop.js](https://github.com/garris/BackstopJS)
 - [ ] Set up SCSS unit testing? [Read Here](https://seesparkbox.com/foundry/how_and_why_we_unit_test_our_sass)

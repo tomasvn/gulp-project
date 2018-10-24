@@ -1,5 +1,5 @@
 /*
-Basic Gulp Workflow v0.7.2
+Basic Gulp Workflow v0.7.3
 Created by: Ngoc Tu Nguyen <nguyenngoct2112@gmail.com>
 Github Repo: https://github.com/tomasvn/gulp-project.git
 **/
@@ -20,11 +20,11 @@ var gulpIf = require('gulp-if')
 var imagemin = require('gulp-imagemin')
 var runSequence = require('run-sequence')
 var size = require('gulp-size')
-var notify = require('gulp-notify')
 var surge = require('gulp-surge')
 var babel = require('gulp-babel')
 var maps = require('gulp-sourcemaps')
 var concat = require('gulp-concat')
+var useref = require('gulp-useref')
 
 /**
 Gulp config variables
@@ -73,11 +73,10 @@ gulp.task('clean', () => {
 Build Tasks
 */
 
-gulp.task('copy:html', () => {
+gulp.task('build:html', () => {
   return gulp.src(src.htmlFiles)
-    .pipe(size())
+    .pipe(useref())
     .pipe(gulp.dest(distRoot))
-    .pipe(notify({message: 'Copy HTML...'}))
 })
 
 gulp.task('build:js', () => {
@@ -87,27 +86,27 @@ gulp.task('build:js', () => {
     .pipe(babel())
     .pipe(uglify()) // Minify only if it is a JS file
     .pipe(size())
-    .pipe(maps.write(dist.maps))
+    .pipe(maps.write('../maps'))
     .pipe(gulp.dest(dist.jsDist))
-    .pipe(notify({message: 'Building JS files...'}))
 })
 
 gulp.task('build:styles', () => {
   return gulp.src(src.stylesFiles)
+    .pipe(maps.init())
     .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['last 5 versions'],
       cascade: false
     }))
     .pipe(gulpIf('*.css', cssnano()))
+    .pipe(size())
+    .pipe(maps.write('../maps'))
     .pipe(gulp.dest(dist.stylesDist))
-    .pipe(notify({message: 'Building style files...'}))
 })
 
 gulp.task('build:fonts', () => {
   return gulp.src(src.fontsFiles)
     .pipe(gulp.dest(dist.fontsDist))
-    .pipe(notify({message: 'Copying fonts...'}))
 })
 
 gulp.task('optimize', () => {
@@ -121,11 +120,10 @@ gulp.task('optimize', () => {
       })
     ]))
     .pipe(gulp.dest(dist.imgDist))
-    .pipe(notify({message: 'Image optimization...'}))
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean', ['copy:html', 'build:styles', 'build:js', 'build:fonts', 'optimize'],
+  runSequence('clean', ['build:html', 'build:styles', 'build:js', 'build:fonts', 'optimize'],
     callback
   )
 })

@@ -53,7 +53,7 @@ npm install
 
 ### v0.7.0
 - [x] Add files size to output - which will log out the full size [gulp-size](https://www.npmjs.com/package/gulp-size)
-- [x] Add gulp notify - add notification output to ```.pipe()``` stream in gulp tasks [gulp-notify](https://www.npmjs.com/package/gulp-notify)
+- [x] ~~Add gulp notify - add notification output to ```.pipe()``` stream in gulp tasks [gulp-notify](https://www.npmjs.com/package/gulp-notify)~~ Removed
 
 ### v0.7.1
 - [x] Set up surge.sh deployment script *needs more work*

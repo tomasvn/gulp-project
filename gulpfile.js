@@ -25,6 +25,7 @@ var babel = require('gulp-babel')
 var maps = require('gulp-sourcemaps')
 var concat = require('gulp-concat')
 var useref = require('gulp-useref')
+var nightwatch = require('nightwatch')
 
 /**
 Gulp config variables
@@ -134,3 +135,4 @@ gulp.task('build', function (callback) {
     domain: <project-domain-name>
   })
 })*/
+

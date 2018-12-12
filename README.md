@@ -63,6 +63,9 @@ npm install
 - [x] Set up babel for compiling basic ES6 features
 - [x] Set up source maps in build
 
+### v0.7.3
+- [ ] Set up gulp modes - production / developement environment
+
 ## Future Update
 
 - [ ] Inline critical css in build [inline-critical](https://github.com/addyosmani/critical)

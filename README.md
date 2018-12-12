@@ -64,6 +64,9 @@ npm install
 - [x] Set up source maps in build
 
 ### v0.7.3
+- [x] Update source-maps output, remove gulp-notify
+
+### v0.7.4
 - [ ] Set up gulp modes - production / developement environment
 
 ## Future Update

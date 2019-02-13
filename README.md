@@ -68,6 +68,7 @@ npm install
 
 ### v0.7.4
 - [ ] Set up gulp modes - production / developement environment
+- [x] Nightwatch.js E2E Testing
 
 ## Future Update
 
@@ -75,7 +76,6 @@ npm install
 - [ ] Set up CSS regression testing tool
   - [backstop.js](https://github.com/garris/BackstopJS)
   - [backstop.js on WP](https://www.christoflee.co.uk/backstopjs-a-beginners-guide-to-testing-in-wordpress/)
-- [ ] Nightwatch.js E2E Testing
 - [ ] ~~Set up SCSS unit testing? [Read Here](https://seesparkbox.com/foundry/how_and_why_we_unit_test_our_sass)~~
 ---
 ## [MIT License](LICENSE.md)

@@ -1,5 +1,5 @@
 /*
-Basic Gulp Workflow v0.7.3
+Basic Gulp Workflow v0.7.4
 Created by: Ngoc Tu Nguyen <nguyenngoct2112@gmail.com>
 Github Repo: https://github.com/tomasvn/gulp-project.git
 **/

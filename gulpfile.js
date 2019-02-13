@@ -8,32 +8,72 @@ Github Repo: https://github.com/tomasvn/gulp-project.git
 Gulp Plugins
 **/
 
-var gulp = require('gulp')
-var gulpConfig = require('./gulp-config.js')
-var sass = require('gulp-sass')
-var autoprefixer = require('gulp-autoprefixer')
-var cssnano = require('gulp-cssnano')
-var browserSync = require('browser-sync').create() // Create browser sync instance
-var del = require('del')
-var uglify = require('gulp-uglify')
-var gulpIf = require('gulp-if')
-var imagemin = require('gulp-imagemin')
-var runSequence = require('run-sequence')
-var size = require('gulp-size')
-var surge = require('gulp-surge')
-var babel = require('gulp-babel')
-var maps = require('gulp-sourcemaps')
-var concat = require('gulp-concat')
-var useref = require('gulp-useref')
+const gulp = require('gulp')
+const gulpConfig = require('./gulp-config.js')
+const sass = require('gulp-sass')
+const autoprefixer = require('gulp-autoprefixer')
+const cssnano = require('gulp-cssnano')
+const browserSync = require('browser-sync').create() // Create browser sync instance
+const del = require('del')
+const uglify = require('gulp-uglify')
+const gulpIf = require('gulp-if')
+const imagemin = require('gulp-imagemin')
+const runSequence = require('run-sequence')
+const size = require('gulp-size')
+const surge = require('gulp-surge')
+const babel = require('gulp-babel')
+const maps = require('gulp-sourcemaps')
+const concat = require('gulp-concat')
+const useref = require('gulp-useref')
+const nightwatch = require('gulp-nightwatch')
 
 /**
 Gulp config variables
 */
 
-var src = gulpConfig.paths.src
-var dist = gulpConfig.paths.dist
-var distRoot = gulpConfig.paths.distRoot
-var srcRoot = gulpConfig.paths.srcRoot
+const src = gulpConfig.paths.src
+const dist = gulpConfig.paths.dist
+const distRoot = gulpConfig.paths.distRoot
+const srcRoot = gulpConfig.paths.srcRoot
+
+/**
+ * Init BS server
+*/
+
+gulp.task('server:start', () => {
+  browserSync.init({
+    server: srcRoot,
+    open: false
+  })
+})
+
+/**
+ * Nightwatch tests
+*/
+
+gulp.task('nightwatch', () => {
+  return gulp.src('')
+  .pipe(nightwatch({
+    configFile: "nightwatch/nightwatch.json"
+  }))
+})
+
+/**
+ * Kill BS server
+*/
+
+gulp.task('server:kill', () => {
+  setTimeout(() => {
+    browserSync.exit()
+  }, 3000)
+})
+
+gulp.task('e2e-test', cb => {
+  runSequence(
+    'server:start',
+    'nightwatch',
+    'server:kill', cb)
+})
 
 /**
 Developement Tasks
@@ -122,7 +162,7 @@ gulp.task('optimize', () => {
     .pipe(gulp.dest(dist.imgDist))
 })
 
-gulp.task('build', function (callback) {
+gulp.task('build', callback => {
   runSequence('clean', ['build:html', 'build:styles', 'build:js', 'build:fonts', 'optimize'],
     callback
   )
@@ -134,3 +174,4 @@ gulp.task('build', function (callback) {
     domain: <project-domain-name>
   })
 })*/
+

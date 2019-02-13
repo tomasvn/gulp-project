@@ -15,14 +15,14 @@ npm install
 ## NPM Scripts
 
 1. Dev task & run dev server + Hot Reload - ```npm run dev``` ✔️
-3. Linting CSS - ```npm run lint:css``` ✔️
-4. Linting JS - ```npm run lint:js``` ✔️
-5. Build task - ```npm run build``` ✔️
-6. Test - ```npm test``` ✔️
-7. Clean dev folder - ```npm run clean:dev``` ✔️
-8. Clean build folder - ```npm run clean:build``` ✔️
-9. Autofix linting issues - ```npm run lint:fix``` ️✔️
-10. Deploy Project - ```npm run deploy``` ❌
+2. Linting CSS - ```npm run lint:css``` ✔️
+3. Linting JS - ```npm run lint:js``` ✔️
+4. Build task - ```npm run build``` ✔️
+5. Test - ```npm test``` ✔️
+6. Clean dev folder - ```npm run clean:dev``` ✔️
+7. Clean build folder - ```npm run clean:build``` ✔️
+8. Autofix linting issues - ```npm run lint:fix``` ️✔️
+9. Deploy Project - ```npm run deploy``` ❌
 
 ---
 

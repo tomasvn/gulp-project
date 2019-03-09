@@ -9,7 +9,6 @@
     "lint:js": "standard ./src/**/*.js",
     "lint:fix": "stylelint --fix ./src/**/*.scss && standard --fix ./src/**/*.js",
     "test:visual": "backstop test --config=visual-tests/mainConfig.js",
-    "test:visual-rerun": "rm -rf backstop-result/bitmaps_test && backstop test --config=visual-tests/mainConfig.js",
     "test:visual-approve": "backstop approve --config=visual-tests/mainConfig.js",
     "test:e2e": "gulp e2e-test --silent",
     "test": "npm run test:visual && npm run test:e2e --silent",

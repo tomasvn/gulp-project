@@ -37,9 +37,9 @@ module.exports = {
   viewports,
   scenarios,
   paths: {
-    bitmaps_reference: "backstop-result/backstop_data/bitmaps_reference",
-    bitmaps_test: "backstop-result/backstop_data/bitmaps_test",
-    html_report: "backstop-result/backstop_data/html_report"
+    bitmaps_reference: "backstop-result/bitmaps_reference",
+    bitmaps_test: "backstop-result/bitmaps_test",
+    html_report: "backstop-result/html_report"
   },
   report: ["browser"],
   engine: "puppeteer",

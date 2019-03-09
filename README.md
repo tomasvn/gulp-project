@@ -72,6 +72,7 @@ npm install
 - [x] Set up CSS regression testing tool
   - [backstop.js](https://github.com/garris/BackstopJS)
   - [backstop.js on WP](https://www.christoflee.co.uk/backstopjs-a-beginners-guide-to-testing-in-wordpress/)
+  - [backstop.js config file](https://github.com/wlsf82/backstop-config)
 
 ## Future Update
 

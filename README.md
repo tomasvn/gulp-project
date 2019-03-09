@@ -6,12 +6,6 @@
 npm install
 ```
 
-## Before Using Gulp
-
-**__Your folder structure should be as follow, as gulp tasks are made based on this folder structure__**
-
-![folders](https://i.imgur.com/7GY1ihH.png "folders")
-
 ## NPM Scripts
 
 1. Dev task & run dev server + Hot Reload - ```npm run dev``` ✔️

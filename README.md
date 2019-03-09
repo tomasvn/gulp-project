@@ -68,9 +68,8 @@ npm install
 - [x] Update source-maps output, remove gulp-notify
 
 ### v0.7.4
-- [ ] Set up gulp modes - production / developement environment
 - [x] Nightwatch.js E2E Testing
-- [ ] Set up CSS regression testing tool
+- [x] Set up CSS regression testing tool
   - [backstop.js](https://github.com/garris/BackstopJS)
   - [backstop.js on WP](https://www.christoflee.co.uk/backstopjs-a-beginners-guide-to-testing-in-wordpress/)
 

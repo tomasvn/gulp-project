@@ -7,3 +7,5 @@ package-lock.json
 .\dist
 .\nightwatch\reports\
 nightwatch/reports/
+.\backstop-result\
+backstop-result

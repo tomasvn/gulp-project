@@ -68,6 +68,10 @@ npm install
   - [backstop.js on WP](https://www.christoflee.co.uk/backstopjs-a-beginners-guide-to-testing-in-wordpress/)
   - [backstop.js config file](https://github.com/wlsf82/backstop-config)
 
+### v0.7.5
+- [] Add prettier
+- [] Add gulp-plumber to prevent pipe breaking from gulp errors
+
 ## Future Update
 
 - [ ] Inline critical css in build [inline-critical](https://github.com/addyosmani/critical)

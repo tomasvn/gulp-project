@@ -68,7 +68,7 @@ npm install
   - [backstop.js config file](https://github.com/wlsf82/backstop-config)
 
 ### v0.7.5
-- [] Add prettier
+- [ ] Add prettier
 - [x] Add gulp-plumber to prevent pipe breaking from gulp errors
 
 ## Future Update

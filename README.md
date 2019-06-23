@@ -75,6 +75,7 @@ npm install
 
 - [ ] Inline critical css in build [inline-critical](https://github.com/addyosmani/critical)
 - [ ] Divide main gulp file into sub task files? More maintainable code
+- [ ] Update to Gulp v4
 - [ ] ~~Set up SCSS unit testing? [Read Here](https://seesparkbox.com/foundry/how_and_why_we_unit_test_our_sass)~~
 ---
 ## [MIT License](LICENSE.md)

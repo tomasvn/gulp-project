@@ -56,7 +56,7 @@ gulp.task('nightwatch', () => {
   return gulp.src('')
   .pipe(plumber())
   .pipe(nightwatch({
-    configFile: "nightwatch/nightwatch.json"
+    configFile: "tools/test-runners/nightwatch/nightwatch.json"
   }))
 })
 

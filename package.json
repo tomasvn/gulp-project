@@ -19,13 +19,9 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "npm run lint:fix --silent",
       "pre-push": ""
     }
-  },
-  "lint-staged": {
-    "*.scss": "npm run lint:css --silent",
-    "*.js": "npm run lint:js --silent"
   },
   "repository": {
     "type": "git",
@@ -49,6 +45,7 @@
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^5.0.3",
     "gulp-nightwatch": "^1.0.1",
+    "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.6.5",
@@ -64,7 +61,6 @@
     "stylelint-config-standard": "^18.2.0"
   },
   "dependencies": {
-    "chromedriver": "^2.46.0",
-    "lint-staged": "^8.2.1"
+    "chromedriver": "^2.46.0"
   }
 }

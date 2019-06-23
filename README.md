@@ -69,8 +69,7 @@ npm install
 
 ### v0.7.5
 - [] Add prettier
-- [] Add gulp-plumber to prevent pipe breaking from gulp errors
-- [] Add lint-staged script
+- [x] Add gulp-plumber to prevent pipe breaking from gulp errors
 
 ## Future Update
 

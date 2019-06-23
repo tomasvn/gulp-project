@@ -26,6 +26,7 @@ const maps = require('gulp-sourcemaps')
 const concat = require('gulp-concat')
 const useref = require('gulp-useref')
 const nightwatch = require('gulp-nightwatch')
+const plumber = require('gulp-plumber')
 
 /**
 Gulp config variables
@@ -53,6 +54,7 @@ gulp.task('server:start', () => {
 
 gulp.task('nightwatch', () => {
   return gulp.src('')
+  .pipe(plumber())
   .pipe(nightwatch({
     configFile: "nightwatch/nightwatch.json"
   }))
@@ -81,6 +83,7 @@ Developement Tasks
 
 gulp.task('dev:styles', () => { // First argument is the name of the task, second argument callback function
   return gulp.src(src.stylesFiles) // Look into this folder for any SCSS files
+    .pipe(plumber())
     .pipe(sass())
     .pipe(sass.sync().on('error', sass.logError)) // If SCSS syntax has any error output it to the CLI
     .pipe(sass({outputStyle: 'expanded'}))
@@ -115,6 +118,7 @@ Build Tasks
 
 gulp.task('build:html', () => {
   return gulp.src(src.htmlFiles)
+    .pipe(plumber())
     .pipe(useref())
     .pipe(gulp.dest(distRoot))
 })
@@ -122,6 +126,7 @@ gulp.task('build:html', () => {
 gulp.task('build:js', () => {
   return gulp.src(src.jsFiles)
     .pipe(maps.init())
+    .pipe(plumber())
     .pipe(concat('main.min.js')) // Concat files to single file
     .pipe(babel())
     .pipe(uglify()) // Minify only if it is a JS file
@@ -133,6 +138,7 @@ gulp.task('build:js', () => {
 gulp.task('build:styles', () => {
   return gulp.src(src.stylesFiles)
     .pipe(maps.init())
+    .pipe(plumber())
     .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['last 5 versions'],
@@ -151,6 +157,7 @@ gulp.task('build:fonts', () => {
 
 gulp.task('optimize', () => {
   return gulp.src(src.imgFiles)
+    .pipe(plumber())
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),

@@ -73,11 +73,17 @@ npm install
 - [ ] Add prettier
 - [x] Add gulp-plumber to prevent pipe breaking from gulp errors
 
+### [![New Version](https://img.shields.io/badge/version-1.0.0-orange.svg)]()
+#### Major Update
+- [ ] Update to gulp 4?
+- [ ] Restructure project folder
+  - [ ] Create sub folder tools - gulp, nightwatch, backstop etc.
+  - [ ] Create sub folder for gulp tasks, divide main file to separte task files
+  - [ ] Create individual gulp tasks
+
 ## Future Update
 
 - [ ] Inline critical css in build [inline-critical](https://github.com/addyosmani/critical)
-- [ ] Divide main gulp file into sub task files? More maintainable code
-- [ ] Update to Gulp v4
 - [ ] ~~Set up SCSS unit testing? [Read Here](https://seesparkbox.com/foundry/how_and_why_we_unit_test_our_sass)~~
 ---
 ## [MIT License](LICENSE.md)

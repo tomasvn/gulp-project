@@ -8,7 +8,7 @@ npm install
 
 ## NPM Scripts
 
-1. Dev task & run dev server + Hot Reload - ```npm run dev``` ✔️
+1. Dev task & run dev server + Hot Reload - ```npm run start``` ✔️
 2. Linting CSS - ```npm run lint:css``` ✔️
 3. Linting JS - ```npm run lint:js``` ✔️
 4. Build task - ```npm run build``` ✔️
@@ -41,8 +41,7 @@ npm install
 ### v0.6.0
 - [x] Set up JS linting
 - [x] Set up image optimization in build
-- [x] Set up minification CSS in build
-- [x] Set up minification JS in build
+- [x] Set up minification CSS/JS in build
 - [x] Copy fonts task in build
 - [x] Set up linting with --fix option, to fix all linting issues
 
@@ -71,6 +70,7 @@ npm install
 ### v0.7.5
 - [] Add prettier
 - [] Add gulp-plumber to prevent pipe breaking from gulp errors
+- [] Add lint-staged script
 
 ## Future Update
 

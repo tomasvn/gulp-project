@@ -1,5 +1,9 @@
 # Gulp Basic Workflow
 
+Stable version [![Stable Version](https://img.shields.io/badge/version-0.7.4-green.svg)]()
+
+Basic gulp workflow boilerplate.
+
 ## Installation
 
 ```

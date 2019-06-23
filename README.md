@@ -1,7 +1,5 @@
 # Gulp Basic Workflow
 
-Stable version [![Stable Version](https://img.shields.io/badge/version-0.7.4-green.svg)]()
-
 Basic gulp workflow boilerplate.
 
 ## Installation
@@ -26,52 +24,52 @@ npm install
 
 ## Changelog
 
-### v0.2.0
+### [![Stable Version](https://img.shields.io/badge/version-0.2.0-green.svg)]()
 - [x] Redo Gulp Tasks
 - [x] Correctly set up gulp watch
 - [x] Add comments to the gulp file
 
-### v0.4.0
+### [![Stable Version](https://img.shields.io/badge/version-0.4.0-green.svg)]()
 - [x] Set up stylelint for SCSS/CSS
 - [x] Set up HUSKY Git Hook (Enforcing linting)
 
-### v0.5.0
+### [![Stable Version](https://img.shields.io/badge/version-0.5.0-green.svg)]()
 - [x] Set up browser-sync in dev task
 - [x] Add initial build task
 - [x] Add dev clean task
 - [x] Fix paths variable
 - [x] Set up autoprefixer in build task
 
-### v0.6.0
+### [![Stable Version](https://img.shields.io/badge/version-0.6.0-green.svg)]()
 - [x] Set up JS linting
 - [x] Set up image optimization in build
 - [x] Set up minification CSS/JS in build
 - [x] Copy fonts task in build
 - [x] Set up linting with --fix option, to fix all linting issues
 
-### v0.7.0
+### [![Stable Version](https://img.shields.io/badge/version-0.7.0-green.svg)]()
 - [x] Add files size to output - which will log out the full size [gulp-size](https://www.npmjs.com/package/gulp-size)
 - [x] ~~Add gulp notify - add notification output to ```.pipe()``` stream in gulp tasks [gulp-notify](https://www.npmjs.com/package/gulp-notify)~~ Removed
 
-### v0.7.1
+### [![Stable Version](https://img.shields.io/badge/version-0.7.1-green.svg)]()
 - [x] Set up surge.sh deployment script *needs more work*
 - [x] Set up HUSKY for surge.sh deployment script (Deploy build on pre-push hook) *needs more work*
 
-### v0.7.2
+### [![Stable Version](https://img.shields.io/badge/version-0.7.2-green.svg)]()
 - [x] Set up babel for compiling basic ES6 features
 - [x] Set up source maps in build
 
-### v0.7.3
+### [![Stable Version](https://img.shields.io/badge/version-0.7.3-green.svg)]()
 - [x] Update source-maps output, remove gulp-notify
 
-### v0.7.4
+### [![Stable Version](https://img.shields.io/badge/version-0.7.4-green.svg)]()
 - [x] Nightwatch.js E2E Testing
 - [x] Set up CSS regression testing tool
   - [backstop.js](https://github.com/garris/BackstopJS)
   - [backstop.js on WP](https://www.christoflee.co.uk/backstopjs-a-beginners-guide-to-testing-in-wordpress/)
   - [backstop.js config file](https://github.com/wlsf82/backstop-config)
 
-### v0.7.5
+### [![Stable Version](https://img.shields.io/badge/version-0.7.5-green.svg)]()
 - [ ] Add prettier
 - [x] Add gulp-plumber to prevent pipe breaking from gulp errors
 

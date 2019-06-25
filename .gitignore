@@ -10,3 +10,4 @@ nightwatch/reports/
 tools/nightwatch/reports/
 .\backstop-result\
 backstop-result
+e2e-result

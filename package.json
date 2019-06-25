@@ -1,6 +1,6 @@
 {
   "name": "gulp-project",
-  "version": "0.7.4",
+  "version": "1.0.0",
   "description": "Gulp Project",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,8 @@
     "lint:css": "stylelint ./src/**/*.scss",
     "lint:js": "standard ./src/**/*.js",
     "lint:fix": "stylelint --fix ./src/**/*.scss && standard --fix ./src/**/*.js",
-    "test:visual": "backstop test --config=visual-tests/mainConfig.js",
-    "test:visual-approve": "backstop approve --config=visual-tests/mainConfig.js",
+    "test:visual": "backstop test --config=tools/test-runners/backstop/mainConfig.js",
+    "test:visual-approve": "backstop approve --config=tools/test-runners/backstop/mainConfig.js",
     "test:e2e": "gulp e2e-test --silent",
     "test": "npm run test:visual && npm run test:e2e --silent",
     "build": "gulp build",
@@ -54,6 +54,7 @@
     "gulp-useref": "^3.1.6",
     "husky": "^2.4.1",
     "nightwatch": "^1.1.12",
+    "require-dir": "^1.2.0",
     "run-sequence": "^2.2.1",
     "selenium-server-standalone-jar": "^3.141.5",
     "standard": "^12.0.1",

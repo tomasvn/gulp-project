@@ -75,11 +75,10 @@ npm install
 
 ### [![New Version](https://img.shields.io/badge/version-1.0.0-orange.svg)]()
 #### Major Update
-- [ ] Update to gulp 4?
-- [ ] Restructure project folder
-  - [ ] Create sub folder tools - gulp, nightwatch, backstop etc.
-  - [ ] Create sub folder for gulp tasks, divide main file to separte task files
-  - [ ] Create individual gulp tasks
+- [x] Restructure project folder
+  - [x] Create sub folder tools - gulp, nightwatch, backstop etc.
+  - [x] Create sub folder for gulp tasks, divide main file to separte task files
+  - [x] Create individual gulp tasks
 
 ## Future Update
 

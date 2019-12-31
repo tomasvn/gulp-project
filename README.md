@@ -1,6 +1,7 @@
 # Gulp Basic Workflow
 
 Basic gulp workflow boilerplate.
+:warning: Works for Node.js < 8
 
 ## Installation
 
@@ -70,7 +71,7 @@ npm install
   - [backstop.js config file](https://github.com/wlsf82/backstop-config)
 
 ### [![Stable Version](https://img.shields.io/badge/version-0.7.5-green.svg)]()
-- [ ] Add prettier
+- [x] Add prettier
 - [x] Add gulp-plumber to prevent pipe breaking from gulp errors
 
 ### [![New Version](https://img.shields.io/badge/version-1.0.0-orange.svg)]()
@@ -79,6 +80,11 @@ npm install
   - [x] Create sub folder tools - gulp, nightwatch, backstop etc.
   - [x] Create sub folder for gulp tasks, divide main file to separte task files
   - [x] Create individual gulp tasks
+
+### [![Stable Version](https://img.shields.io/badge/version-1.2.1-green.svg)]()
+- [x] Add lint-staged
+- [x] Update pre-commit hook
+- [x] Add commitizen
 
 ## Future Update
 

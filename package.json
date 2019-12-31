@@ -1,10 +1,11 @@
 {
   "name": "gulp-project",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "Gulp Project",
   "main": "index.js",
   "scripts": {
     "start": "gulp watch",
+    "commit": "git cz",
     "lint:css": "stylelint ./src/**/*.scss",
     "lint:js": "standard ./src/**/*.js",
     "lint:fix": "stylelint --fix ./src/**/*.scss && standard --fix ./src/**/*.js",
@@ -19,9 +20,21 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:fix --silent",
+      "pre-commit": "lint-staged",
       "pre-push": ""
     }
+  },
+  "lint-staged": {
+    "./src/**/*.js": [
+      "prettier --write",
+      "npm test",
+      "npm run lint:js",
+      "git add -A"
+    ],
+    "./src/**/*.scss": [
+      "npm run lint:css",
+      "git add -A"
+    ]
   },
   "repository": {
     "type": "git",
@@ -34,15 +47,16 @@
   },
   "homepage": "https://github.com/tomasvn/gulp-project#readme",
   "devDependencies": {
-    "@babel/preset-env": "^7.5.2",
+    "@babel/preset-env": "^7.7.7",
     "browser-sync": "^2.26.7",
-    "del": "^5.0.0",
+    "del": "^5.1.0",
+    "git-cz": "^3.3.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.1.0",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
-    "gulp-if": "^2.0.2",
+    "gulp-if": "^3.0.0",
     "gulp-imagemin": "^6.0.0",
     "gulp-nightwatch": "^1.0.1",
     "gulp-plumber": "^1.2.1",
@@ -51,18 +65,25 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-surge": "^0.1.3",
     "gulp-uglify": "^3.0.2",
-    "gulp-useref": "^3.1.6",
-    "husky": "^3.0.0",
-    "nightwatch": "^1.1.13",
+    "gulp-useref": "^4.0.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "nightwatch": "^1.3.2",
+    "prettier": "^1.19.1",
     "require-dir": "^1.2.0",
     "run-sequence": "^2.2.1",
     "selenium-server-standalone-jar": "^3.141.5",
-    "standard": "^12.0.1",
-    "stylelint": "^10.1.0",
-    "stylelint-config-standard": "^18.3.0"
+    "standard": "^14.3.1",
+    "stylelint": "^12.0.1",
+    "stylelint-config-standard": "^19.0.0"
   },
   "dependencies": {
     "chromedriver": "^75.0.1",
     "pump": "^3.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
   }
 }

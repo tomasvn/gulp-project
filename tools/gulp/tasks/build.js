@@ -11,6 +11,7 @@ const sass = require('gulp-sass')
 const cssnano = require('gulp-cssnano')
 const autoprefixer = require('gulp-autoprefixer')
 const gulpIf = require('gulp-if')
+const stripDebug = require('gulp-config-strip-debug')
 const gulpConfig = require('../../../gulp-config')
 const src = gulpConfig.paths.src
 const dist = gulpConfig.paths.dist
@@ -34,6 +35,7 @@ gulp.task('build:js', () => {
     gulp.src(src.jsFiles),
     maps.init(),
     plumber(),
+    stripDebug(),
     concat('main.min.js'), // Concat files to single file
     babel(),
     uglify(),

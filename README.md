@@ -1,7 +1,7 @@
 # Gulp Basic Workflow
 
-Basic gulp workflow boilerplate.
-:warning: Works for Node.js < 8
+- Basic gulp workflow boilerplate.
+- :warning: **Only Node.js < 8**
 
 ## Installation
 

@@ -41,7 +41,7 @@
     "url": "git+https://github.com/tomasvn/gulp-project.git"
   },
   "author": "Ngoc Tu Nguyen",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/tomasvn/gulp-project/issues"
   },

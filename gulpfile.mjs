@@ -7,7 +7,7 @@ Github Repo: https://github.com/tomasvn/gulp-project.git
 import path from "node:path"
 import importDir from "@yimura/import-dir";
 
-importDir(path.resolve("./tools/gulp/tasks/"), { recurse: true, noCache: true });
+importDir(path.resolve("./build/"), { recurse: true, noCache: true });
 
 /*gulp.task('deploy', function() {
   return surge({

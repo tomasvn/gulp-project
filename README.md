@@ -23,5 +23,4 @@ pnpm install
 
 ## [Changelog](CHANGELOG.md)
 
----
 ## [MIT License](LICENSE.md)

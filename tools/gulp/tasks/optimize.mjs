@@ -1,10 +1,10 @@
-const gulp = require('gulp')
-const pump = require('pump')
-const plumber = require('gulp-plumber')
-const imagemin = require('gulp-imagemin')
-const gulpConfig = require('../../../gulp-config')
-const dist = gulpConfig.paths.dist
-const src = gulpConfig.paths.src
+import gulp from "gulp";
+import pump from "pump";
+import plumber from "gulp-plumber";
+import imagemin from "gulp-imagemin";
+import { config } from "../../../gulp-config.mjs";
+
+const { dist, src } = config.paths;
 
 gulp.task('optimize', () => {
   return pump([
@@ -20,4 +20,4 @@ gulp.task('optimize', () => {
     ]),
     gulp.dest(dist.imgDist)
   ])
-})
+});

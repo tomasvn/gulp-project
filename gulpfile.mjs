@@ -1,11 +1,13 @@
 /*
-Basic Gulp Workflow v1.0.0
+Basic Gulp Workflow v2.0.0
 Created by: Ngoc Tu Nguyen <nguyenngoct2112@gmail.com>
 Github Repo: https://github.com/tomasvn/gulp-project.git
 **/
 
-const requireDir = require('require-dir')
-requireDir('./tools/gulp/tasks/', { recurse: true })
+import path from "node:path"
+import importDir from "@yimura/import-dir";
+
+importDir(path.resolve("./tools/gulp/tasks/"), { recurse: true, noCache: true });
 
 /*gulp.task('deploy', function() {
   return surge({

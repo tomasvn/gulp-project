@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   'Index test' : function (browser) {
     browser
       .url('http://192.168.0.227:3000')

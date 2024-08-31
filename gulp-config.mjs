@@ -1,4 +1,6 @@
-module.exports = {
+import argv from "yargs";
+
+export const config = {
   paths: {
     src: {
       imgFiles: './src/images/*.+(png|jpg|gif|svg)',
@@ -6,7 +8,7 @@ module.exports = {
       stylesOutput: './src/styles',
       htmlFiles: './src/*.html',
       jsFiles: 'src/js/*.js',
-      fontsFiles: '.src/fonts/**/*'
+      fontsFiles: './src/fonts/**/*'
     },
     dist: {
       imgDist: './dist/images',
@@ -16,6 +18,7 @@ module.exports = {
       maps: 'maps'
     },
     srcRoot: './src',
-    distRoot: './dist'
+    distRoot: './dist',
+    isProd: argv.production,
   }
 }

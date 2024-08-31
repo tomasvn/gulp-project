@@ -22,7 +22,7 @@ const viewports = [
   "desktop",
 ];
 
-module.exports = {
+export const basicConfig = {
   baseUrl,
   projectId,
   relativeUrls,

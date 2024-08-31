@@ -17,25 +17,8 @@
     "build": "gulp build --production",
     "dev:clean": "gulp clean:dev",
     "build:clean": "gulp clean",
-    "deploy": "gulp deploy"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": ""
-    }
-  },
-  "lint-staged": {
-    "./src/**/*.js": [
-      "prettier --write",
-      "npm test",
-      "npm run lint:js",
-      "git add -A"
-    ],
-    "./src/**/*.scss": [
-      "npm run lint:css",
-      "git add -A"
-    ]
+    "deploy": "gulp deploy",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,12 @@
+{
+  "./src/**/*.js": [
+      "prettier --write",
+      "npm test",
+      "npm run lint:js",
+      "git add -A"
+    ],
+    "./src/**/*.scss": [
+      "npm run lint:css",
+      "git add -A"
+    ]
+}

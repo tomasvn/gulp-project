@@ -1,6 +1,6 @@
 import gulp from "gulp";
 import del from "del";
-import { config } from "../../../gulp-config";
+import { config } from "@build/config.mjs";
 
 const { src } = config.paths
 

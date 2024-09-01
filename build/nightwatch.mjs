@@ -12,7 +12,7 @@ gulp.task("nightwatch", () => {
         gulp.src(""),
         plumber(),
         nightwatch({
-            configFile: "tools/test-runners/nightwatch/nightwatch.json",
+            configFile: "test-runners/nightwatch/nightwatch.json",
         }),
     ])
 });

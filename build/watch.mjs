@@ -1,6 +1,6 @@
 import gulp from "gulp"
 import browserSync from "browser-sync";
-import { config } from "../../../gulp-config.mjs";
+import { config } from "@build/config.mjs";
 
 const { srcRoot, src } = config.paths;
 

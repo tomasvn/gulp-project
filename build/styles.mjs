@@ -4,7 +4,7 @@ import dartSass from 'sass';
 import gulpSass from "gulp-sass";
 import plumber from "gulp-plumber";
 import browserSync from 'browser-sync';
-import { config } from "../../../gulp-config.mjs";
+import { config } from "@build/config.mjs";
 
 const sass = gulpSass(dartSass);
 const { stylesFiles } = config.paths.src;

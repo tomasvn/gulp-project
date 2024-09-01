@@ -13,7 +13,7 @@ import cssnano from "gulp-cssnano";
 import autoprefixer from "gulp-autoprefixer";
 import gulpIf from "gulp-if";
 import stripDebug from "gulp-config-strip-debug";
-import { config } from "../../../gulp-config.mjs";
+import { config } from "build/config.mjs";
 
 const sass = gulpSass(dartSass);
 const { src, dist, distRoot, isProd } = config.paths;

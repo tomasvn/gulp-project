@@ -6,21 +6,21 @@ const { srcRoot } = config.paths;
 
 /**
  * Init BS server
-*/
+ */
 
-gulp.task('server:start', () => {
-  browserSync.init({
-    server: srcRoot,
-    open: false
-  });
+gulp.task("server:start", () => {
+    browserSync.init({
+        server: srcRoot,
+        open: false,
+    });
 });
 
 /**
  * Kill BS server
-*/
+ */
 
-gulp.task('server:kill', () => {
-  setTimeout(() => {
-    browserSync.exit()
-  }, 3000)
+gulp.task("server:kill", () => {
+    setTimeout(() => {
+        browserSync.exit();
+    }, 3000);
 });

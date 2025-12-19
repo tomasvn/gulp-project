@@ -1,12 +1,6 @@
 {
-  "./src/**/*.js": [
-      "prettier --write",
-      "npm test",
-      "npm run lint:js",
-      "git add -A"
-    ],
-    "./src/**/*.scss": [
-      "npm run lint:css",
-      "git add -A"
-    ]
+    "./src/**/*.{js,mjs}": ["standard --fix", "prettier --write"],
+    "./build/**/*.mjs": ["standard --fix", "prettier --write"],
+    "./src/**/*.scss": ["stylelint --fix --cache"],
+    "*.{mjs,js}": ["standard --fix", "prettier --write"]
 }

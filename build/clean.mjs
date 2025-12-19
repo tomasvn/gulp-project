@@ -1,6 +1,6 @@
 import gulp from "gulp";
-import del from "del";
-import { config } from "@build/config.mjs";
+import { deleteAsync } from "del";
+import { config } from "./config.mjs";
 
 const { src } = config.paths
 
@@ -9,11 +9,11 @@ Clean Tasks
 */
 
 gulp.task('clean:dev', () => {
-  return del([src.stylesOutput])
+  return deleteAsync([src.stylesOutput])
 });
 
 gulp.task('clean', () => {
-  return del(['dist']) // Delete dist folder
+  return deleteAsync(['dist']) // Delete dist folder
 });
 
 export const clean = gulp.parallel('clean:dev', 'clean');

@@ -2,7 +2,7 @@ import gulp from "gulp";
 import pump from "pump";
 import plumber from "gulp-plumber";
 import imagemin from "gulp-imagemin";
-import { config } from "@build/config.mjs";
+import { config } from "./config.mjs";
 
 const { dist, src } = config.paths;
 

@@ -1,14 +1,13 @@
 import gulp from "gulp";
 import pump from "pump"
-import dartSass from 'sass';
+import * as dartSass from 'sass';
 import gulpSass from "gulp-sass";
 import plumber from "gulp-plumber";
 import browserSync from 'browser-sync';
-import { config } from "@build/config.mjs";
+import { config } from "./config.mjs";
 
 const sass = gulpSass(dartSass);
-const { stylesFiles } = config.paths.src;
-const { stylesOutput } = config.paths.dist;
+const { stylesFiles, stylesOutput } = config.paths.src;
 
 /**
 Developement Tasks

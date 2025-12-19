@@ -1,14 +1,18 @@
-import gulp from "gulp"
+import gulp from "gulp";
 import browserSync from "browser-sync";
-import { config } from "@build/config.mjs";
+import { config } from "./config.mjs";
 
 const { srcRoot, src } = config.paths;
 
-gulp.task('watch', ['dev:styles'], () => {
-  browserSync.init({ // Initialize browser sync
-    server: srcRoot // Input folder we want to serve to the browser
-  });
+gulp.task(
+    "watch",
+    gulp.series("dev:styles", () => {
+        browserSync.init({
+            // Initialize browser sync
+            server: srcRoot, // Input folder we want to serve to the browser
+        });
 
-  gulp.watch(src.stylesFiles, ['dev:styles']); // Watch - it will run the styles task on file change
-  gulp.watch(src.htmlFiles).on('change', browserSync.reload); // Watch changes in HTML file and reload it browser
-});
+        gulp.watch(src.stylesFiles, gulp.series("dev:styles")); // Watch - it will run the styles task on file change
+        gulp.watch(src.htmlFiles).on("change", browserSync.reload); // Watch changes in HTML file and reload it browser
+    }),
+);

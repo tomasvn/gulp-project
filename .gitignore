@@ -1,13 +1,21 @@
-.\node_modules\
-.DS_Store
-.vscode
-.\package-lock.json
-node_modules
+# Dependencies
+node_modules/
 package-lock.json
-.\dist
-.\nightwatch\reports\
+
+# Build output
+dist/
+
+# Test results and reports
+test-results/
+playwright-report/
+playwright/.cache/
+
+# IDE and OS files
+.DS_Store
+.vscode/
+
+# Old test artifacts (can be removed later)
 nightwatch/reports/
 tools/nightwatch/reports/
-.\backstop-result\
-backstop-result
-e2e-result
+backstop-result/
+e2e-result/

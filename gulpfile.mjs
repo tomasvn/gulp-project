@@ -4,10 +4,23 @@ Created by: Ngoc Tu Nguyen <nguyenngoct2112@gmail.com>
 Github Repo: https://github.com/tomasvn/gulp-project.git
 **/
 
-import path from "node:path"
-import importDir from "@yimura/import-dir";
+import gulp from "gulp";
 
-importDir(path.resolve("./build/"), { recurse: true, noCache: true });
+// Import build tasks manually (importDir was causing issues)
+import "./build/config.mjs";
+import "./build/clean.mjs";
+import "./build/server.mjs";
+import "./build/styles.mjs";
+import "./build/watch.mjs";
+import "./build/build.mjs";
+import "./build/optimize.mjs";
+
+// Main build tasks
+gulp.task("build", gulp.series("clean", gulp.parallel("build:js", "build:styles"), "build:html"));
+gulp.task(
+    "build:production",
+    gulp.series("clean", "build:js", "build:styles", "build:manifest", "build:html", "build:rev-replace"),
+);
 
 /*gulp.task('deploy', function() {
   return surge({
@@ -15,4 +28,3 @@ importDir(path.resolve("./build/"), { recurse: true, noCache: true });
     domain: <project-domain-name>
   })
 })*/
-

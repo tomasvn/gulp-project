@@ -1,0 +1,6 @@
+{
+    "./src/**/*.{js,mjs}": ["standard --fix", "prettier --write"],
+    "./build/**/*.mjs": ["standard --fix", "prettier --write"],
+    "./src/**/*.scss": ["stylelint --fix --cache"],
+    "*.{mjs,js}": ["standard --fix", "prettier --write"]
+}

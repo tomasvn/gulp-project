@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@test-runners/*": ["./test-runners/*"],
+      "@build/*": ["./build/*"],
+    }
+  }
+}
